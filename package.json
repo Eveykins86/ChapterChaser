@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "apollo-server-express": "^3.12.1",
-    "mongoose": "^8.0.0"
+    "mongoose": "^8.0.0",
+    "webpack": "^5.89.0"
   }
 }
