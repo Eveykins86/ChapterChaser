@@ -27,13 +27,16 @@ const SignupForm = () => {
       event.stopPropagation();
     }
 
+    // Log the userFormData to the console for debugging
+    console.log('userFormData:', userFormData);
+
     try {
       const user = await saveUser({
         variables: userFormData,
       });
       Auth.login(user.data.saveUser.token);
     } catch (err) {
-      console.error(error);
+      console.error(err);
       setShowAlert(true);
     }
 

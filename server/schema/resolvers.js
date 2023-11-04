@@ -59,13 +59,7 @@ const resolvers = {
       // If user attempts to execute this mutation and isn't logged in, throw an error
       throw new AuthenticationError('You need to be logged in!');
     },
-    // Set up mutation so a logged in user can only remove their user and no one else's
-    // removeUser: async (parent, args, context) => {
-    //   if (context.user) {
-    //     return User.findOneAndDelete({ _id: context.user._id });
-    //   }
-    //   throw new AuthenticationError('You need to be logged in!');
-    // },
+
     // Make it so a logged in user can only remove a book from their own user
     removeBook: async (parent, { bookId }, context) => {
       if (context.user) {
