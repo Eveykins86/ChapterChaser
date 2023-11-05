@@ -33,7 +33,7 @@ const SignupForm = () => {
       });
 
       if (data && data.SaveUser) {
-        const { token, user } = data.SaveUser;
+        const { token, user } = data.SaveUser.token;
         console.log(user);
         Auth.login(token);
       }
