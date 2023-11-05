@@ -31,10 +31,15 @@ const SignupForm = () => {
     console.log('userFormData:', userFormData);
 
     try {
-      const user = await saveUser({
-        variables: userFormData,
+      const { data } = await saveUser({
+        variables: { ...userFormData },
       });
-      Auth.login(user.data.saveUser.token);
+
+      if (data && data.saveUser) {
+        const { token, user } = data.addUser;
+        console.log(user);
+        Auth.login(token);
+      }
     } catch (err) {
       console.error(err);
       setShowAlert(true);
