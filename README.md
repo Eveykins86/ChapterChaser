@@ -45,10 +45,6 @@ Navigate to the server directory:
 
 **Set Environment Variables**:
 
-Create a .env file in the server directory with the required environment variables.
-
-**Start the Server**:
-
 **Launch the server**:
 
 `npm start`
@@ -57,20 +53,14 @@ Create a .env file in the server directory with the required environment variabl
 
 **Clone the Repository**:
 
-**Install Dependencies**:
-
-**Move to the client directory**:
-
-`cd ChapterChaser-Client`
 
 **Install client dependencies**:
+
+Go to root of the repository and run:
 
 `npm install`
 
 **Set Environment Variables**:
-
-Create a .env file in the client directory with the GraphQL API endpoint URL.
-Start the Client:
 
 **Launch the client application**:
 
@@ -81,6 +71,7 @@ Start the Client:
 Open your web browser and visit http://localhost:3000 to start using "Chapter Chaser."
 
 **Deploy to Heroku** (Optional)
+
 If you plan to deploy the app to Heroku, please refer to Heroku's documentation for detailed deployment instructions. Configure your environment variables and push your code to the Heroku app's Git repository.
 
 Your "Chapter Chaser" web application should now be ready to use!
